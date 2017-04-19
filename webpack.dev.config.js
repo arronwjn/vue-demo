@@ -13,7 +13,10 @@ const webpackDev ={
     publicPath: '/build/'  //公共路径
   },
   resolve:{                   //解决文件后缀省略
-    extensions: [".js",".css",".jpg",".png"]
+    extensions: [".js",".css",".jpg",".png"],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   },
   module: {
     loaders: [
