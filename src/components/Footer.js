@@ -11,11 +11,11 @@ class Footer extends React.Component{
   render(){
     return(
       <div className={style.footer}>
-        <Link to=''><AlignLeft/></Link>
-        <Link to=''><DashBoard/></Link>
-        <Link to=''><Bell/></Link>
-        <Link to=''><Comment/></Link>
-        <Link to=''><Bars/></Link>
+        <Link to='/'><AlignLeft/></Link>
+        <Link to='find'><DashBoard/></Link>
+        <Link to='notice'><Bell/></Link>
+        <Link to='letter'><Comment/></Link>
+        <Link to='more'><Bars/></Link>
       </div>
     )
   }
