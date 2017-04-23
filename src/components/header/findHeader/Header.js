@@ -1,5 +1,5 @@
 import React from "react"
-import style from '../style/home/home.css'
+import style from '../../.././style/home/home.css'
 
 
 class Header extends React.Component{

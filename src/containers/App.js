@@ -1,11 +1,11 @@
 import React from 'react'
 import {Router,Route,hashHistory,IndexRoute} from 'react-router'
-import Home from './Home'
-import FindIndex from './FindIndex'
-import Index from './IndexRoute'
-import Notice from './Notice'
-import PrivateLetter from './PrivateLetter'
-import More from './More'
+import Home from '../pages/home/Home'
+import FindIndex from '../pages/findindex/FindIndex'
+import Index from '../pages/home/IndexRoute'
+import Notice from '../pages/notice/Notice'
+import PrivateLetter from '../pages/privateletter/PrivateLetter'
+import More from '../pages/more/More'
 
 
 class App extends React.Component{
