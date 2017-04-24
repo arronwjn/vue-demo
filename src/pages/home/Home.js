@@ -6,8 +6,15 @@ import Footer from '../.././components/Footer'
 
 
 class Home extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      btn:true
+    }
+  }
   myFunction(){
     console.log('111')
+    this.setState({btn:false})
   }
   render(){
     return(
@@ -16,7 +23,7 @@ class Home extends React.Component{
         <div className='mid' id='topNav' onScroll={this.myFunction.bind(this)}>
           {this.props.children}
         </div>
-        <Footer/>
+        {this.state.btn?<Footer/>:<div></div>}
       </div>
     )
   }
