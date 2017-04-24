@@ -2,25 +2,56 @@
   margin: 0;
   padding: 0;
 }
+#app{
+  height: 100%;
+  -webkit-overflow-scrolling:touch;  /*解决苹果手机滑动平滑问题*/
+}
 .mywarp{
   display:flex;
   flex-direction: column;
   align-content: space-between;
-  height: 100vh;
+  height: 98vh;
 }
 .header{
   font-size: 24px;
-  line-height: 10vh;
+  height: 13vh;
   background-color: #118ef2;
   color:#ccc;
+  z-index:3;
+}
+.header a{
+  color:#fff;
+  line-height: 8vh;
+  font-size: 30px;
+}
+.am-search{
+  float: left;
+  width:247px;
+  background-color:#118ef2;
+  height:6vh;
+  margin-top: 2vh;
+}
+.am-search-cancel{
+  display: none;
+}
+.am-search-input{
+  border-top-left-radius: 3vh;
+  border-top-right-radius: 3vh;
+  border-bottom-left-radius: 3vh;
+  border-bottom-right-radius: 3vh;
 }
 .mid{
   flex-grow: 1;
+  overflow-y: scroll;
+  display: flex;
+  overflow-y: auto;
+
 }
 .footer{
   display:flex;
   justify-content: space-around;
-  line-height: 10vh;
+  line-height: 13vh;
   background-color: #ccc;
   font-size: 5vh;
+  align-items: center;
 }

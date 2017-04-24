@@ -1,24 +1,16 @@
 import React from "react"
 // import  '../../.././style/home/home.css'
 import { SearchBar} from 'antd-mobile';
-
+import Bolt from 'react-icons/lib/fa/bolt'
 
 class Header extends React.Component{
-  constructor(){
-    super()
-    this.state = {
-     value: '美食',
-     focused: false
-   }
-  }
-
   render(){
     return(
       <div className='header'>
         <SearchBar
-        value={this.state.value}
         placeholder="搜索"
-      />
+        />
+        <a href='#'><Bolt/></a>  
       </div>
     )
   }
