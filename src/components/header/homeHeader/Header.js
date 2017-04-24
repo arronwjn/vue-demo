@@ -1,5 +1,5 @@
 import React from "react"
-import style from '../../.././style/home/home.css'
+// import  '../../.././style/home/home.css'
 import { SearchBar} from 'antd-mobile';
 
 
@@ -14,8 +14,7 @@ class Header extends React.Component{
 
   render(){
     return(
-      <div className={style.header}>
-        home
+      <div className='header'>
         <SearchBar
         value={this.state.value}
         placeholder="搜索"

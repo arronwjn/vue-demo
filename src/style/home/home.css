@@ -12,6 +12,7 @@
   font-size: 24px;
   line-height: 10vh;
   background-color: #118ef2;
+  color:#ccc;
 }
 .mid{
   flex-grow: 1;

@@ -13,7 +13,7 @@ const webpackDev ={
     publicPath: '/build/'  //公共路径
   },
   resolve:{                   //解决文件后缀省略
-    extensions: [".js",".css",".jpg",".png"],
+    extensions: [".web.js",".js",".css",".jpg",".png",".json"],
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
@@ -27,7 +27,7 @@ const webpackDev ={
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules'
+        loader: 'style-loader!css-loader' //用cssModules需配置？modules匹配还需下载postcss-loader和postcss-modules-values依赖
       },
       {
         test:/\.(jpe?g|png)$/,

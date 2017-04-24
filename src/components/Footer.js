@@ -1,5 +1,5 @@
 import React from "react"
-import style from '../style/home/home.css'
+// import style from '../style/home/home.css'
 import {Link} from 'react-router'
 import AlignLeft from 'react-icons/lib/fa/align-left'
 import DashBoard from 'react-icons/lib/go/dashboard'
@@ -10,7 +10,7 @@ import Comment from 'react-icons/lib/go/comment'
 class Footer extends React.Component{
   render(){
     return(
-      <div className={style.footer}>
+      <div className='footer'>
         <Link to='/'><AlignLeft/></Link>
         <Link to='find'><DashBoard/></Link>
         <Link to='notice'><Bell/></Link>
