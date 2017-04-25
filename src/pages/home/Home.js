@@ -12,9 +12,15 @@ class Home extends React.Component{
       btn:true
     }
   }
-  myFunction(){
-    console.log('111')
-    this.setState({btn:false})
+  myFunction(e){
+    // console.log(e)
+    console.log(e.target.scrollTop)
+    if(e.target.scrollTop>0){
+      this.setState({btn:false})
+    }else{
+      this.setState({btn:true})
+    }
+
   }
   render(){
     return(

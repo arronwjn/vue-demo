@@ -52,7 +52,7 @@
   display:flex;
   justify-content: space-around;
   line-height: 10vh;
-  background-color: #b7b7b7;
+  background-color: #e2e2e2;
   font-size: 5vh;
   align-items: center;
   opacity: 0.8;
@@ -60,4 +60,39 @@
 }
 .footer a{
   color:#9e9e9e;
+}
+.HomePage img{
+  width: 10vh;
+  height: 10vh;
+}
+.HomePage li{
+  width: auto;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 24px;
+  height: 16vh;
+  margin-bottom: 10px;
+}
+.HomePage span{
+  display: block;
+  float: left;
+  width: 37vh;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color:#6b6b6b;
+}
+.HomePage>li>div>p{
+  color:#a6a6a6;
+  font-size: 15px;
+}
+.HomePage button{
+  width: 40px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  margin-right: 5px;
+  margin-left: 5px;
+  color:#fff;
 }
