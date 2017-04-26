@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
-import HomeReducer from './home/HomeReducer'
+import HomeText from './home/HomeReducer'
+import FindReducer from './findindex/FindReducer'
 
 const rootReducer = combineReducers({
-  HomeText:HomeReducer
+  HomeText,
+  FindReducer
 })
 
 

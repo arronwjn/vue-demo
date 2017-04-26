@@ -1,0 +1,1 @@
+export const HMOE_INDEXROUTE = 'HMOE_INDEXROUTE'
