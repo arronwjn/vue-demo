@@ -1,14 +1,14 @@
-import types from '../.././constants'
+// import types from '../.././constants/actionType'
 
-const initialState={
-  addList:[],
-}
+// const initialState={
+//   addList:[]
+// }
 
-function HomeReducer(state=initial,action){
+function HomeReducer(state=[],action){
     switch(action.type) {
-      case 'Curriculum-All':
+      case 'HMOE-INDEXROUTE':
         console.log('reducer')
-        return action.All
+        return action.homeList
       default:
         return state
     }

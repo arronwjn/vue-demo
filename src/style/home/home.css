@@ -96,3 +96,19 @@
   margin-left: 5px;
   color:#fff;
 }
+.text{
+  width: 100%;
+}
+.text p{
+  font-size: 15px;
+}
+.markdown-text img{
+  width: 60vh;
+  height: 60vh;
+}
+.markdown-text ul li{
+  font-size: 15px;
+}
+.markdown-text table{
+  font-size: 15px;
+}

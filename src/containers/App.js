@@ -3,6 +3,7 @@ import {Router,Route,hashHistory,IndexRoute} from 'react-router'
 import Home from '../pages/home/Home'
 import FindIndex from '../pages/findindex/FindIndex'
 import Index from '../pages/home/IndexRoute'
+import Text from '../pages/home/Text'
 import Notice from '../pages/notice/Notice'
 import PrivateLetter from '../pages/privateletter/PrivateLetter'
 import More from '../pages/more/More'
@@ -19,6 +20,7 @@ class App extends React.Component{
             <Route path='notice' component={Notice}/>
             <Route path='letter' component={PrivateLetter}/>
             <Route path='more' component={More}/>
+            <Route path='text' component={Text}/>
           </Route>
         </Router>
       </div>

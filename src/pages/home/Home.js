@@ -13,10 +13,11 @@ class Home extends React.Component{
     }
   }
   myFunction(e){
-    // console.log(e)
     console.log(e.target.scrollTop)
-    if(e.target.scrollTop>0){
+    console.log(e.target.scrollTop)
+    if(e.target.scrollTop>100){
       this.setState({btn:false})
+
     }else{
       this.setState({btn:true})
     }
