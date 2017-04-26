@@ -1,29 +1,21 @@
 import React from 'react'
-import axios from 'axios'
+import {connect} from 'react-redux'
+import store from '../.././store/store.js'
 
 
 class Text extends React.Component{
-  constructor(){
-    super()
-    this.state={
-      data:[]
-    }
-  }
-  componentWillMount(){
-    axios.get('https://cnodejs.org/api/v1/topics',{mdrender:true})
-    .then(res=>{
-      this.setState({data:res.data.data})
-    })
-  }
+
   render(){
+
     return(
       <div className='text'>
-        {this.state.data.map((item,index)=>
-          <div key={index} dangerouslySetInnerHTML={{__html: <div></div>}} />
-        )}
+        <div dangerouslySetInnerHTML={{__html: this.props.content}} />
       </div>
     )
   }
 }
 
-export default Text;
+let mapStateToProps= (state)=>({
+  content:state.IndexContent
+})
+export default connect(mapStateToProps)(Text);

@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import {hashHistory} from 'react-router'
-import {HomeList} from '../.././actions/dispath'
+import {HomeList} from '../.././actions/dispatch'
+import {IndexContent} from '../.././actions/dispatch'
 import {connect} from 'react-redux'
 import store from '../.././store/store.js'
 
@@ -10,15 +11,14 @@ class Index extends React.Component{
   componentWillMount(){
     this.props.HomeList()
   }
-  handleClick(){
-    hashHistory.push('/text')
+  handleClick(id){
+    this.props.IndexContent(id)
   }
   render(){
-    console.log(this.props.homelist)
     return(
       <div className='HomePage'>
         {this.props.homelist.map((item,index)=>
-          <li key={index} onClick={this.handleClick.bind(this)}>
+          <li key={index} onClick={this.handleClick.bind(this,item.id)}>
             <img src={item.author.avatar_url}/>
             <button>{item.tab}</button>
             <div>
@@ -35,4 +35,4 @@ let mapStateToProps= (state)=>({
   homelist:state.HomeText
 })
 
-export default connect(mapStateToProps,{HomeList})(Index);
+export default connect(mapStateToProps,{HomeList,IndexContent})(Index);

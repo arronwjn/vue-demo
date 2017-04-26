@@ -22,7 +22,10 @@ class Home extends React.Component{
   render(){
     return(
       <div className='mywarp' ref="userOrder">
-        {this.props.router.isActive('/',true)?<HomeHeader/>:<FindHeader/>}
+        {this.props.router.isActive('/',true)&&this.state.btn?
+        <HomeHeader/>:this.props.router.isActive('/find',true)?
+        <FindHeader/>:<div></div>
+        }
         <div className='mid' id='topNav' onScroll={this.myFunction.bind(this)}>
           {this.props.children}
         </div>
