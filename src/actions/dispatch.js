@@ -19,7 +19,8 @@ export function IndexContent(id){
     console.log('indexContent');
     axios.get(`https://cnodejs.org/api/v1/topic/${id}`)
     .then(res=>{
-      dispatch({type:types.home.INDEX_CONTENT,indexContent:res.data.data.content})
+      console.log(res)
+      dispatch({type:types.home.INDEX_CONTENT,indexContent:res.data.data})
       hashHistory.push('/text')
     })
   }

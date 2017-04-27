@@ -9,13 +9,14 @@ class Text extends React.Component{
 
     return(
       <div className='text'>
-        <div dangerouslySetInnerHTML={{__html: this.props.content}} />
+        <h3>{this.props.data.title}</h3>
+        <div dangerouslySetInnerHTML={{__html: this.props.data.content}} />
       </div>
     )
   }
 }
 
 let mapStateToProps= (state)=>({
-  content:state.IndexContent
+  data:state.IndexContent
 })
 export default connect(mapStateToProps)(Text);
