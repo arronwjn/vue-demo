@@ -17,7 +17,9 @@ class Header extends React.Component{
   render(){
     return(
       <div className='header'>
-      
+        <SearchBar
+        placeholder="搜索"
+      />
         <a href='#' onClick={this.handleClick.bind(this)}><Bolt/></a>
         {this.state.TwoLevelNav?
           <div className='HeaderNav'>
