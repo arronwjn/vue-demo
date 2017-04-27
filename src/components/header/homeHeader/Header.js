@@ -1,6 +1,6 @@
 import React from "react"
 // import  '../../.././style/home/home.css'
-import { SearchBar} from 'antd-mobile';
+import {SearchBar} from 'antd-mobile';
 import Bolt from 'react-icons/lib/fa/bolt'
 import {Link} from 'react-router'
 
@@ -8,12 +8,11 @@ class Header extends React.Component{
   constructor(){
     super()
     this.state={
-      btn:false
+      TwoLevelNav:false
     }
   }
   handleClick(){
-    console.log('aaa')
-    this.setState({btn:!this.state.btn})
+    this.setState({TwoLevelNav:!this.state.TwoLevelNav})
   }
   render(){
     return(
@@ -22,7 +21,7 @@ class Header extends React.Component{
         placeholder="搜索"
         />
         <a href='#' onClick={this.handleClick.bind(this)}><Bolt/></a>
-        {this.state.btn?
+        {this.state.TwoLevelNav?
           <div className='HeaderNav'>
             <ul>
               <li><Link to='/'>首页</Link></li>
@@ -33,8 +32,7 @@ class Header extends React.Component{
             </ul>
           </div>:
           <div></div>
-      }
-
+        }
       </div>
     )
   }

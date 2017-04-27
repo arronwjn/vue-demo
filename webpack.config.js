@@ -1,8 +1,11 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports={
   devtool: 'source-map',//找到源代码错误
   entry:'./index.js',　　　//指定入口文件
   output:{
-    path:'build',　　　　　　//出口文件所在文件夹
+    path:__dirname + '/build',　　　　　　//出口文件所在文件夹
     filename:'bundle.js',　　//出口文件
     publicPath: 'build'  //公共路径
   },
@@ -10,19 +13,19 @@ module.exports={
     extensions: [".js",".css",".jpg",".png"]
   },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.js$/,　　　　//编译.js文件
         exclude: /node_modules/,
-        use: "babel-loader"  //用babel-loader包编译
+        loader: "babel-loader"  //用babel-loader包编译
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        loader: ['style-loader','css-loader']
       },
       {
         test:/\.(jpe?g|png)$/,
-        use: 'file-loader'
+        loader: 'file-loader'
       }
     ]
   }
