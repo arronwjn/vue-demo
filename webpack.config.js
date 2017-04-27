@@ -10,7 +10,7 @@ module.exports={
     publicPath: 'build'  //公共路径
   },
   resolve:{                   //解决文件后缀省略
-    extensions: [".js",".css",".jpg",".png"]
+    extensions: [".web.js",".js",".css",".jpg",".png",".json"]
   },
   module: {
     loaders: [
