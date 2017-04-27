@@ -1,3 +1,0 @@
-export const HMOE_INDEXROUTE = 'HMOE_INDEXROUTE'
-
-export const INDEX_CONTENT = 'INDEX_CONTENT'
